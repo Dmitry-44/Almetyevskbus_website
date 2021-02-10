@@ -1,0 +1,202 @@
+@media (min-width: 1200px){
+    .container{
+        max-width: 1170px;
+    }
+}
+@media (max-width: 1200px){
+    .container{
+        max-width: 960px;
+    }
+}
+@media (max-width: 992px){
+    .container{
+        max-width: 720px;
+    }
+    .background{
+        min-height: 350px;
+    }
+    .content{
+        text-align: center;
+        &__body{
+            grid-gap: 20px;
+            grid-template-rows: 2fr 3fr 2fr;
+            grid-template-areas: 
+            "info"
+            "img"
+            "text_2"
+        }
+        &__img{
+            height: 180px;
+            width: 70%;
+            justify-self: center;
+            background-size: 90%;
+            background-position: 50% 50%;
+            align-self: center;
+        }
+        &Info{
+            &__text_1::before{    // убираем вертикальную линию около текста
+                display: none;
+            }
+            &__title{
+                display: none;
+            }
+        };
+    }
+    .rout div{
+        flex-basis: 100%;
+    }
+                  // Страница "МАРШРУТ", определяем порядок флекс-элементов контента //
+                  .rout__text.rout--first{
+                    order: 0;
+                }
+                .rout__map.rout--first{
+                    order: 1;
+                }
+                .rout__text.rout--second{
+                    order: 2;
+                }
+                .rout__map.rout--second{
+                    order: 3;
+                }
+                .rout__text.rout--third{
+                    order: 4;
+                }
+                .rout__map.rout--third{
+                    order: 5;
+                }
+
+                // убираем вертикальную линию около текста
+                .rout__text::before{
+                 display: none;
+                }
+}
+@media (max-width: 768px){
+    .container{
+        max-width: 720px;
+    }
+    .menu li a{
+        font-size: 15px;
+        }
+    .rout div{
+        padding-bottom: 15px;
+        font-size: 0.8em;
+    }
+    .priceInfo{
+        font-size: 0.7em;
+        letter-spacing: 1px;
+    }
+
+}
+
+@media (max-width: 650px){
+    .price{
+        justify-content: center !important ;
+    }
+    .priceCard{
+        margin: 5 auto;
+    }
+}
+
+@media (max-width: 576px){
+    .container{
+        max-width: 540px;
+    }
+    body{
+        font-size: 0.8em;
+    }
+    .header{
+        margin-top: 0;
+    }
+    .headerBackground, .headerBackground::before{
+        max-height: 50px;
+    }
+    .menu{
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav{
+        display: block;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 35px;
+        margin: 0px ;
+        height: 270px;
+        background-color: #34495e;
+    }
+    .navigation-enter{
+        transform: translateY(-500px);
+        opacity: 0;
+    }
+    .menu li {
+        width: 100%;
+        &::after{        
+            content: none;
+        }
+
+    }
+    .menu li a{
+        display: block;
+        width: 100%;
+    }
+    .menu__background__mobile{
+        display: none;
+        height: 50px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #34495e;
+    }
+    #burger__btn{
+        display: block;
+    }
+    .menu-active{
+        display: block;
+    }
+
+    article{
+     margin-top: 60px;
+     padding-top: 50px;
+     & h1 {
+         font-size: 24px;
+     }
+     & h2 {
+        font-size: 18px;
+    }
+    }
+    .contacts{
+        margin-top: 60px;
+        padding-top: 50px;
+        & h1 {
+            font-size: 24px;
+        }
+        & h2 {
+           font-size: 18px;
+       }
+       }
+
+    .content{
+        &__img{
+            width: 360px;
+        }
+    }
+}
+@media (max-width: 420px){
+    .content{
+        &__img{
+            width: 280px;
+        }
+    }
+
+    .rout__map{
+        max-width: 100%;
+    }
+    .map{
+        width: 100%;
+        height: auto;
+    }
+    .priceCard{
+        flex-basis: 85%;
+    }
+}

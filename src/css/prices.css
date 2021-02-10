@@ -1,0 +1,42 @@
+.price {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+.priceCard {
+  flex-basis: 300px;
+  height: 100px;
+  margin-top: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border: 3px solid #e6e6e6;
+  border-radius: 5%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px 8px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transform: none;
+  transition: transform 0.3s ease-in; }
+  .priceCard:hover {
+    transform: scale(1.1); }
+  .priceCard span, .priceCard span::before, .priceCard span::after {
+    top: 50%;
+    width: 60%;
+    margin: 0 auto;
+    height: 2px;
+    margin-top: -1px;
+    background-color: #f39c12; }
+
+.timeInfo {
+  height: auto;
+  margin: 30px 0px 12px 0px;
+  font-size: 0.8em; }
+  .timeInfo p {
+    margin-top: 5px; }
+  .timeInfo span {
+    font-size: 0.95em;
+    color: #737373; }
